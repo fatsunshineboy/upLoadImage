@@ -42,7 +42,6 @@
 
 <script setup>
 import { ref } from "vue";
-import ViewPicture from "./ViewPicture.vue"
 
 const props = defineProps({
     width: {
