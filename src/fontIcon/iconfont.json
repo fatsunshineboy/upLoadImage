@@ -1,0 +1,16 @@
+{
+  "id": "3696865",
+  "name": "上传",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1816769",
+      "name": "差号",
+      "font_class": "close",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    }
+  ]
+}

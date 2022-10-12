@@ -1,0 +1,141 @@
+// 整体设置
+$Width:var(--width);
+$UnSelectColor:var(--unSelectColor);
+$PrimaryColor: var(--primaryColor);
+
+// 上传区域设置
+$MainMinHeight: var(--mainMinHeight);
+$MainHeigth: var(--mainHeight);
+
+// 上传图标设置
+$ImgWidth: var(--iconWidth);
+
+// 图片展示列表
+$ImgItemWidth:var(--imgItemWidth);
+$ImgItemHeight:var(--imgItemHeight);
+
+*{
+    box-sizing: border-box;
+}
+
+.upLoadPicture {
+    overflow: hidden;
+    width: $Width;
+    margin: auto;
+
+    .main {
+        overflow: hidden;
+        min-height: $MainMinHeight;
+        width: 100%;
+        height: $MainHeigth;
+        border: 1px dashed $UnSelectColor;
+        margin: auto;
+        position: relative;
+        border-radius: 8px;
+        &:hover{
+            border: 1px dashed $PrimaryColor;
+            cursor: pointer;
+        }
+        #upLoadImg {
+            z-index: 100;
+            width: $ImgWidth;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.7;
+        }
+    }
+
+    .tip {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 40px;
+            overflow: hidden;
+        }
+    }
+
+    .imageList {
+        .imageItem {
+            overflow: hidden;
+            z-index: 0;
+            border: 1px solid #dcdfe6;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &:hover{
+                .success{
+                    opacity: 0;
+                }
+                .close{
+                    opacity: 1;
+                }
+            }
+
+            .img {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: $ImgItemWidth;
+                height: $ImgItemHeight;
+                object-fit: contain;
+                z-index: 1;
+            }
+
+            .title {
+                display: inline-flex;
+                justify-content: center;
+                flex-direction: column;
+                width: calc(100% - 30px);
+                margin-left: 4px;
+            }
+
+            .success {
+                position: absolute;
+                right: -17px!important;
+                top: -7px!important;
+                width: 46px;
+                height: 26px;
+                background: #67c23a;
+                text-align: center;
+                transform: rotate(45deg);
+                opacity: 1;
+                #successImg{
+                    height: 1em;
+                    width: 1em;
+                    font-size: 12px;
+                    margin-top: 12px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            .close{
+                opacity: 0;
+                #closeImg{
+                    height: 1em;
+                    width: 1em;
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    cursor: pointer;
+                    opacity: .75;
+                    &:hover{
+                        color: #1296db;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.mainHover{
+    border: 1px dashed $PrimaryColor!important;
+}
