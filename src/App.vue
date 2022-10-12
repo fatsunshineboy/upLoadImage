@@ -4,6 +4,7 @@
 
 <script setup>
 import UpLoadImage from "./components/UpLoadImage.vue";
+import "./fontIcon/iconfont.js";
 </script>
 
 <style>
